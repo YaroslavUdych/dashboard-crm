@@ -47,11 +47,13 @@ built with **React**, **TypeScript**, **Node.js**, **Express**, and **PostgreSQL
 
 The project is divided into two parts:
 
+<pre> ```
 crm-proj/
 |
 ├── backend/ # Express + PostgreSQL + Sequelize
 |
 └── frontend/ # React + Redux Toolkit + Vite
+``` </pre>
 
 Each part has its own README explaining folder structure, setup, and usage in detail.
 

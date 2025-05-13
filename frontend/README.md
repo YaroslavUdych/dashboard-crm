@@ -8,6 +8,7 @@ The project uses **React + TypeScript** and follows a **modular, feature-based a
 
 ## Folder Structure
 
+<pre> ```
 frontend/
 ├── public/ # Static files served as-is
 │ ├── avatars/ # Default avatar images
@@ -64,6 +65,8 @@ frontend/
 ├── eslint.config.js # ESLint configuration
 ├── prettier.config.js # Prettier configuration
 └── README.md # This file
+
+````</pre>
 
 ---
 

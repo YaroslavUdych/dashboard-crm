@@ -30,7 +30,7 @@ This approach encourages separation of concerns and makes the application easier
 
 ## Folder Structure
 
-```
+<pre> ```
 backend/
 ├── config/          # Project configuration
 │   ├── database.js  # Database configuration
@@ -61,7 +61,7 @@ backend/
 ├── .gitignore       # Files to exclude from version control
 ├── package.json     # Dependencies and scripts
 └── README.md        # Documentation
-```
+````</pre>
 
 ## Folder and File Descriptions
 
