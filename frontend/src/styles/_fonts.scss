@@ -1,0 +1,30 @@
+@font-face {
+  font-family: 'DMSans';
+  src: url('@/assets/fonts/DMSans/DMSans-VariableFont_opsz,wght.ttf')
+    format('truetype');
+  font-weight: 300 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DMSans';
+  src: url('@/assets/fonts/DMSans/DMSans-Italic-VariableFont_opsz,wght.ttf')
+    format('truetype');
+  font-weight: 300 800;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'PublicSans';
+  src: url('@/assets/fonts/PublicSans/PublicSans-VariableFont_wght.ttf')
+    format('truetype');
+  font-weight: 300 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PublicSans';
+  src: url('@/assets/fonts/PublicSans/PublicSans-Italic-VariableFont_wght.ttf')
+    format('truetype');
+  font-weight: 300 800;
+  font-style: italic;
+}

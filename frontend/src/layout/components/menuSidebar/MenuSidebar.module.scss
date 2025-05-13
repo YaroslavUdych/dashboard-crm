@@ -1,0 +1,88 @@
+.sidebar {
+  position: relative;
+  grid-area: sidebar;
+  width: 260px;
+  min-height: 100vh;
+  height: 100%;
+  padding: 0 0.8rem 0.8rem 0.8rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-right: 1px solid vars.$border-color;
+  background-color: var(--background-color);
+
+  transition: width 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+  & .iconButtonWrapper {
+    background-color: var(--background-color);
+    border-radius: 50%;
+    position: fixed;
+    z-index: 1000;
+    top: 23px;
+    left: 247px;
+    transition: left 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+    &.moved {
+      left: 77px;
+    }
+  }
+
+  &.collapsed {
+    width: 90px;
+    padding: 0 0.3rem 0.3rem 0.3rem;
+  }
+
+  & .logoWrapper {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: sticky;
+    top: 0;
+    background-color: var(--header-background);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    z-index: 999;
+  }
+
+  & nav {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .sidebar {
+    display: block;
+    position: absolute;
+    top: 0;
+    transform: translateX(-100%);
+    z-index: 9999;
+    transition: transform 0.35s cubic-bezier(0.4, 1, 0.9, 1);
+
+    &.openMobileMenu {
+      transform: translateX(0);
+    }
+  }
+
+  .iconButtonWrapper {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .sidebar {
+    width: 70%;
+  }
+}

@@ -1,0 +1,16 @@
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.3rem;
+  width: 100%;
+
+  background-color: inherit;
+}
+
+@media screen and (max-width: 766px) {
+  .loginForm {
+    gap: 2.3rem;
+  }
+}

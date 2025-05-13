@@ -1,0 +1,133 @@
+.selectContainer {
+  background-color: inherit;
+  position: relative;
+  width: 100%;
+  -webkit-tap-highlight-color: transparent;
+  width: 100%;
+
+  &.active .arrow {
+    transform: translateY(-4px) rotate(180deg);
+  }
+}
+
+.selectLabel {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+
+  padding: 0 6px;
+
+  font-size: 1rem;
+  line-height: 1.7;
+  text-transform: capitalize;
+
+  pointer-events: none;
+  color: vars.$palette-grey-500;
+  background-color: inherit;
+
+  transition:
+    transform 0.2s ease-out,
+    top 0.2s ease-out,
+    left 0.2s ease-out,
+    font-size 0.2s ease-out;
+
+  &.shrink {
+    z-index: 1;
+    top: 0;
+    left: 14px;
+    transform: translateY(-50%);
+
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.05rem;
+  }
+}
+
+.selectButton {
+  position: relative;
+  width: 100%;
+  height: 49px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  padding: 12px 18px;
+
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-color);
+
+  border: 1.5px solid rgba(145 158 171 / 0.5);
+  border-radius: 8px;
+
+  background-color: inherit;
+  transition: all 0.15s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    border-color: var(--text-color);
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 0.5px var(--text-color);
+    border-color: var(--text-color);
+  }
+}
+
+.selectOption {
+  width: 100%;
+  padding: 14px;
+
+  border-radius: 4px;
+  cursor: pointer;
+
+  text-align: left;
+  font-size: 0.9rem;
+  color: var(--text-color);
+
+  background-color: transparent;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: var(--button-hover-background-color-default-variant-text);
+  }
+
+  &.selected {
+    background-color: rgba(145, 158, 171, 0.13);
+  }
+}
+
+.arrow {
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid vars.$palette-grey-500;
+}
+
+.errorMessage {
+  position: absolute;
+  left: 0;
+  top: 110%;
+  transform: translateY(-5px);
+
+  font-size: 0.8rem;
+  color: vars.$palette-error-main;
+  opacity: 0;
+  visibility: hidden;
+
+  transition: all 0.2s ease;
+
+  &.visible {
+    transform: translateY(-2px);
+    opacity: 1;
+    visibility: visible;
+  }
+}

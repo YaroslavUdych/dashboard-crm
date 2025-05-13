@@ -1,0 +1,26 @@
+.layout {
+  width: 100%;
+  height: 100vh;
+
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas: 'sidebar content';
+
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+.content {
+  grid-area: content;
+  width: 100%;
+  height: 100svh;
+  // min-height: 100svh;
+  overflow-y: auto;
+}
+
+@media screen and (max-width: 992px) {
+  .layout {
+    display: flex;
+    flex-direction: column;
+  }
+}

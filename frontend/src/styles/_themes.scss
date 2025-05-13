@@ -1,0 +1,109 @@
+@use 'variables' as vars;
+
+.themeLight {
+  // background and text colors
+  --text-color: #{vars.$text-color-light-theme};
+  --palette-text-secondary: #{vars.$palette-text-secondary-light};
+  --background-color: #{vars.$background-color-light-theme};
+  --header-background: #{vars.$header-background-light-theme};
+  --hover-background-color: #{vars.$palette-grey-200};
+  --palette-paper: #{vars.$palette-paper-light};
+  --palette-background-neutral: #{vars.$palette-background-neutral-light};
+  --nav-item-color: #{vars.$nav-item-color-light};
+  --nav-item-color-active: #078dee;
+  --nav-item-bg-color: rgba(7 141 238/0.08);
+  --overlay-background: #{vars.$overlay-background-light};
+  --upload-photo-overlay-hover-color: #{vars.$upload-photo-overlay-hover-color-light-theme};
+  // buttons default
+  --button-background-color-default: #{vars.$button-background-default-light-theme};
+  --button-text-color-default: #{vars.$button-text-color-default-light-theme};
+  --button-hover-background-color-default: #202a34da;
+  --button-hover-background-color-default-variant-text: #{vars.$palette-grey-300};
+  // buttons primary
+  --button-background-color-primary: #078dee;
+  --button-text-color-primary: #fdf9f9;
+  --button-hover-background-color-primary: #0351ab;
+  --button-hover-bg-color-primary-variant-text: #f9edff;
+  // buttons secondary
+  --button-background-color-secondary: #8e33ff;
+  --button-text-color-secondary: #fdf9f9;
+  --button-hover-background-color-secondary: #5119b7;
+  --button-hover-bg-color-secondary-variant-text: #f7f0fc;
+  // buttons info
+  --button-background-color-info: #00b8d9;
+  --button-text-color-info: #fdf9f9;
+  --button-hover-background-color-info: #006c9c;
+  --button-hover-bg-color-info-variant-text: #6afafa91;
+  // buttons success
+  --button-background-color-success: #22c55e;
+  --button-text-color-success: #fdf9f9;
+  --button-hover-background-color-success: #118d57;
+  --button-hover-bg-color-success-variant-text: #cefcce;
+  // buttons warning
+  --button-background-color-warning: #ffab00;
+  --button-text-color-warning: #1c252e;
+  --button-hover-background-color-warning: #b76e00;
+  --button-hover-bg-color-warning-variant-text: #fef5d2;
+  // buttons error
+  --button-background-color-error: #ff5630;
+  --button-text-color-error: #fdf9f9;
+  --button-hover-background-color-error: #b71d18;
+  --button-hover-bg-color-error-variant-text: #{vars.$palette-grey-300};
+
+  // login greet background color
+  --login-greet-bg-color: #{vars.$login-greet-bg-color-light-theme};
+}
+
+.themeDark {
+  // background and text colors
+  --text-color: #{vars.$text-color-dark-theme};
+  --palette-text-secondary: #{vars.$palette-text-secondary-dark};
+  --background-color: #{vars.$background-color-dark-theme};
+  --header-background: #{vars.$header-background-dark-theme};
+  --hover-background-color: #{vars.$palette-grey-800};
+  --palette-paper: #{vars.$palette-paper-dark};
+  --palette-background-neutral: #{vars.$palette-background-neutral-dark};
+  --nav-item-color: #{vars.$nav-item-color-dark};
+  --nav-item-color-active: #68cdf9;
+  --nav-item-bg-color: rgba(7 141 238/0.08);
+  --overlay-background: #{vars.$overlay-background-dark};
+  --upload-photo-overlay-hover-color: #{vars.$header-background-dark-theme};
+  // buttons default
+  --button-background-color-default: #{vars.$button-background-default-dark-theme};
+  --button-text-color-default: #{vars.$button-text-color-default-dark-theme};
+  --button-hover-background-color-default: #c4cdd5;
+  --button-hover-background-color-default-variant-text: #{vars.$palette-grey-700};
+  // buttons primary
+  --button-background-color-primary: #078dee;
+  --button-text-color-primary: #fdf9f9;
+  --button-hover-background-color-primary: #0351ab;
+  --button-hover-bg-color-primary-variant-text: #05283f;
+  // buttons secondary
+  --button-background-color-secondary: #8e33ff;
+  --button-text-color-secondary: #fdf9f9;
+  --button-hover-background-color-secondary: #5119b7;
+  --button-hover-bg-color-secondary-variant-text: #02243b;
+  // buttons info
+  --button-background-color-info: #00b8d9;
+  --button-text-color-info: #fdf9f9;
+  --button-hover-background-color-info: #006c9c;
+  --button-hover-bg-color-info-variant-text: #012b32;
+  // buttons success
+  --button-background-color-success: #22c55e;
+  --button-text-color-success: #fdf9f9;
+  --button-hover-background-color-success: #118d57;
+  --button-hover-bg-color-success-variant-text: #042e24;
+  // buttons warning
+  --button-background-color-warning: #ffab00;
+  --button-text-color-warning: #1c252e;
+  --button-hover-background-color-warning: #b76e00;
+  --button-hover-bg-color-warning-variant-text: #361d01;
+  // buttons error
+  --button-background-color-error: #ff5630;
+  --button-text-color-error: #fdf9f9;
+  --button-hover-background-color-error: #b71d18;
+  --button-hover-bg-color-error-variant-text: #202a34da;
+
+  // login greet background color
+  --login-greet-bg-color: #{vars.$login-greet-bg-color-dark-theme};
+}

@@ -1,0 +1,15 @@
+.card {
+  position: relative;
+  background-color: var(--palette-paper);
+  border-radius: 16px;
+  box-shadow: vars.$shadows-3;
+  overflow: hidden;
+
+  padding: 1.5rem;
+}
+
+@media screen and (max-width: 992px) {
+  .card {
+    padding: 1rem;
+  }
+}

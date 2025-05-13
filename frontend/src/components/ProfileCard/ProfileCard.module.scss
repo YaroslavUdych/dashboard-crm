@@ -1,0 +1,56 @@
+.profileCard {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+
+  & h2 {
+    color: vars.$palette-info-dark;
+  }
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.4rem;
+}
+
+.listItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.listItem_title {
+  display: flex;
+  align-items: flex-end;
+  font-size: 0.875rem;
+  color: var(--palette-text-secondary);
+  gap: 0.2rem;
+
+  & svg {
+    color: var(--nav-item-color);
+  }
+}
+
+.listItem_data {
+  font-size: 1rem;
+
+  & a {
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 1px;
+      background: var(--text-color);
+      opacity: 0;
+      transition: opacity 0.15s;
+    }
+
+    &:hover::after {
+      opacity: 1;
+      transition: opacity 0.15s;
+    }
+  }
+}

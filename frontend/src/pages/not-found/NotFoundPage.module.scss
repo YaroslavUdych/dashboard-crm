@@ -1,0 +1,24 @@
+.container {
+  height: 100dvh;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--background-color);
+  color: var(--text-color);
+
+  & h1 {
+    font-size: 1.875rem;
+    text-align: center;
+  }
+
+  & p {
+    font-size: 1rem;
+    color: var(--palette-text-secondary);
+    line-height: 1.5;
+    margin-bottom: 0.8rem;
+  }
+}
+
+.illustration {
+  width: 100%;
+  max-width: 400px;
+}

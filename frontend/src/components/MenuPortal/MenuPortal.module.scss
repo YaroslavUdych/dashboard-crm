@@ -1,0 +1,37 @@
+.menuPortal {
+  width: 200px;
+  display: flex;
+  cursor: pointer;
+
+  & .marginArea {
+    width: 6px;
+    background-color: transparent;
+  }
+
+  & .menuContent {
+    width: 100%;
+    padding: 4px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    font-family: 'PublicSans', sans-serif;
+
+    color: var(--text-color);
+
+    background-color: var(--palette-paper);
+    box-shadow: vars.$shadows-4;
+    border-radius: 8px;
+
+    & a {
+      flex-direction: row;
+      justify-content: flex-start;
+      padding: 10px 20px;
+      gap: 10px;
+
+      font-size: 0.83rem;
+      line-height: 1.57143;
+    }
+  }
+}

@@ -1,0 +1,371 @@
+.button {
+  position: relative;
+  overflow: hidden;
+
+  min-width: 110px;
+  letter-spacing: 0.04rem;
+  font-weight: 600;
+  line-height: 1.71429;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+
+  transition: all 0.3s;
+
+  & span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & svg {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  &.disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 0.5;
+  }
+
+  // small size
+  &.small {
+    padding: 5px 12px;
+    font-size: 0.8125rem;
+    border-radius: 16px;
+  }
+
+  // medium size
+  &.medium {
+    padding: 7px 12px;
+    font-size: 0.875rem;
+    border-radius: 18px;
+  }
+
+  // large size
+  &.large {
+    padding: 8px 12px;
+    font-size: 0.98rem;
+    border-radius: 8px;
+  }
+
+  // fullwidth size
+  &.fullwidth {
+    width: 100%;
+  }
+
+  // default color with different variants
+  &.default {
+    &.contained {
+      background-color: var(--button-background-color-default);
+      color: var(--button-text-color-default);
+
+      &:hover {
+        background-color: var(--button-hover-background-color-default);
+        color: var(--button-text-color-default);
+      }
+
+      &:active {
+        background-color: var(--button-background-color-default);
+      }
+    }
+
+    &.outlined {
+      background-color: transparent;
+      color: var(--button-background-color-default);
+      border: 2px solid rgba(145, 158, 171, 0.32);
+
+      &:hover {
+        background-color: var(
+          --button-hover-background-color-default-variant-text
+        );
+      }
+
+      &:active {
+        background-color: transparent;
+      }
+    }
+
+    &.text {
+      background-color: transparent;
+      color: var(--button-background-color-default);
+
+      &:hover {
+        background-color: var(
+          --button-hover-background-color-default-variant-text
+        );
+      }
+
+      &:active {
+        background-color: transparent;
+      }
+    }
+  }
+
+  // primary color with different variants
+  &.primary {
+    &.contained {
+      background-color: var(--button-background-color-primary);
+      color: var(--button-text-color-primary);
+
+      &:hover {
+        background-color: var(--button-hover-background-color-primary);
+      }
+
+      &:active {
+        background-color: var(--button-background-color-primary);
+      }
+    }
+
+    &.outlined {
+      background-color: transparent;
+      color: var(--button-background-color-primary);
+      box-shadow: 0 0 0 1px rgba(7, 141, 238, 0.48);
+
+      &:hover {
+        background-color: var(--button-hover-bg-color-primary-variant-text);
+        box-shadow: 0 0 0 1.5px rgba(7, 141, 238, 0.48);
+      }
+
+      &:active {
+        background-color: transparent;
+      }
+    }
+
+    &.text {
+      background-color: transparent;
+      color: var(--button-background-color-primary);
+
+      &:hover {
+        background-color: var(--button-hover-bg-color-primary-variant-text);
+      }
+
+      &:active {
+        background-color: transparent;
+      }
+    }
+  }
+
+  // secondary color with different variants
+  &.secondary {
+    &.contained {
+      background-color: var(--button-background-color-secondary);
+      color: var(--button-text-color-secondary);
+
+      &:hover {
+        background-color: var(--button-hover-background-color-secondary);
+      }
+
+      &:active {
+        background-color: var(--button-background-color-secondary);
+      }
+    }
+
+    &.outlined {
+      background-color: transparent;
+      color: var(--button-background-color-secondary);
+      box-shadow: 0 0 0 1px rgba(142, 51, 255, 0.48);
+
+      &:hover {
+        background-color: var(--button-hover-bg-color-secondary-variant-text);
+        box-shadow: 0 0 0 1.5px rgba(142, 51, 255, 0.48);
+      }
+
+      &:active {
+        background-color: transparent;
+      }
+    }
+
+    &.text {
+      background-color: transparent;
+      color: var(--button-background-color-secondary);
+
+      &:hover {
+        background-color: var(--button-hover-bg-color-secondary-variant-text);
+      }
+
+      &:active {
+        background-color: transparent;
+      }
+    }
+  }
+
+  // info color with different variants
+  &.info {
+    &.contained {
+      background-color: var(--button-background-color-info);
+      color: var(--button-text-color-info);
+
+      &:hover {
+        background-color: var(--button-hover-background-color-info);
+      }
+
+      &:active {
+        background-color: var(--button-background-color-info);
+      }
+    }
+
+    &.outlined {
+      background-color: transparent;
+      color: var(--button-background-color-info);
+      box-shadow: 0 0 0 1px rgba(0, 184, 217, 0.48);
+
+      &:hover {
+        background-color: var(--button-hover-bg-color-info-variant-text);
+        box-shadow: 0 0 0 1.5px rgba(0, 184, 217, 0.48);
+      }
+
+      &:active {
+        background-color: transparent;
+      }
+    }
+
+    &.text {
+      background-color: transparent;
+      color: var(--button-background-color-info);
+
+      &:hover {
+        background-color: var(--button-hover-bg-color-info-variant-text);
+      }
+
+      &:active {
+        background-color: transparent;
+      }
+    }
+  }
+
+  // success color with different variants
+  &.success {
+    &.contained {
+      background-color: var(--button-background-color-success);
+      color: var(--button-text-color-success);
+
+      &:hover {
+        background-color: var(--button-hover-background-color-success);
+      }
+
+      &:active {
+        background-color: var(--button-background-color-success);
+      }
+    }
+
+    &.outlined {
+      background-color: transparent;
+      color: var(--button-background-color-success);
+      box-shadow: 0 0 0 1px rgba(34, 197, 94, 0.48);
+
+      &:hover {
+        background-color: var(--button-hover-bg-color-success-variant-text);
+        box-shadow: 0 0 0 1.5px rgba(34, 197, 94, 0.48);
+      }
+
+      &:active {
+        background-color: transparent;
+      }
+    }
+
+    &.text {
+      background-color: transparent;
+      color: var(--button-background-color-success);
+
+      &:hover {
+        background-color: var(--button-hover-bg-color-success-variant-text);
+      }
+
+      &:active {
+        background-color: transparent;
+      }
+    }
+  }
+
+  // warning color with different variants
+  &.warning {
+    &.contained {
+      background-color: var(--button-background-color-warning);
+      color: var(--button-text-color-warning);
+
+      &:hover {
+        background-color: var(--button-hover-background-color-warning);
+      }
+
+      &:active {
+        background-color: var(--button-background-color-warning);
+      }
+    }
+
+    &.outlined {
+      background-color: transparent;
+      color: var(--button-background-color-warning);
+      box-shadow: 0 0 0 1px rgba(255, 171, 0, 0.48);
+
+      &:hover {
+        background-color: var(--button-hover-bg-color-warning-variant-text);
+        box-shadow: 0 0 0 1.5px rgba(255, 171, 0, 0.48);
+      }
+
+      &:active {
+        background-color: transparent;
+      }
+    }
+
+    &.text {
+      background-color: transparent;
+      color: var(--button-background-color-warning);
+
+      &:hover {
+        background-color: var(--button-hover-bg-color-warning-variant-text);
+      }
+
+      &:active {
+        background-color: transparent;
+      }
+    }
+  }
+
+  &.error {
+    &.contained {
+      background-color: var(--button-background-color-error);
+      color: var(--button-text-color-error);
+
+      &:hover {
+        background-color: var(--button-hover-background-color-error);
+      }
+
+      &:active {
+        background-color: var(--button-background-color-error);
+      }
+    }
+
+    &.outlined {
+      background-color: transparent;
+      color: var(--button-background-color-error);
+      box-shadow: 0 0 0 1px rgba(255, 86, 48, 0.48);
+
+      &:hover {
+        background-color: var(--button-hover-bg-color-error-variant-text);
+        box-shadow: 0 0 0 1.5px rgba(255, 86, 48, 0.48);
+      }
+
+      &:active {
+        background-color: transparent;
+      }
+    }
+
+    &.text {
+      background-color: transparent;
+      color: var(--button-background-color-error);
+
+      &:hover {
+        background-color: var(--button-hover-bg-color-error-variant-text);
+      }
+
+      &:active {
+        background-color: transparent;
+      }
+    }
+  }
+}

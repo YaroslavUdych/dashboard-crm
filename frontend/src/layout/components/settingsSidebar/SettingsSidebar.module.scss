@@ -1,0 +1,42 @@
+.settingsSidebar {
+  width: 350px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: var(--background-color);
+  border-left: 1px solid vars.$border-color;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 15px 0 15px;
+
+  & p {
+    font-size: 1.1rem;
+    font-weight: 500;
+    font-family: 'PublicSans', sans-serif;
+  }
+}
+
+.body {
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  overflow-y: auto;
+  padding: 15px;
+}
+
+@media screen and (max-width: 420px) {
+  .settingsSidebar {
+    width: 100%;
+    border-left: none;
+  }
+}

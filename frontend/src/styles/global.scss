@@ -1,0 +1,156 @@
+@use './fonts';
+@use './variables';
+@use './reset';
+@use './themes';
+@use './ripple';
+
+@media screen and (min-width: 1200px) {
+  /* Стилізація загального контейнера бігунка */
+  ::-webkit-scrollbar {
+    width: 10px; /* ширина для вертикального бігунка */
+  }
+
+  /* Стилізація доріжки бігунка */
+  ::-webkit-scrollbar-track {
+    background: var(--background-color);
+  }
+
+  /* Стилізація бігунка */
+  ::-webkit-scrollbar-thumb {
+    background: #888; /* колір бігунка */
+    cursor: pointer;
+    border-radius: 4px;
+  }
+
+  /* Ефект при наведенні */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; /* колір бігунка при наведенні */
+  }
+}
+
+.wrapper {
+  width: 100%;
+  padding: vars.$padding-3 vars.$padding-2;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+h2 {
+  font-family: 'PublicSans', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.MuiFormControl-root {
+  position: relative !important;
+  background-color: inherit !important;
+}
+
+.MuiInputBase-adornedEnd {
+  background-color: inherit !important;
+  height: 49px !important;
+  width: 100% !important;
+  font-size: 1rem !important;
+  font-weight: 400 !important;
+  font-family: 'DMSans', sans-serif !important;
+  line-height: 1.7 !important;
+  border: 1.5px solid rgba(145 158 171 / 0.5) !important;
+  border-radius: 8px !important;
+  color: var(--text-color) !important;
+  transition: all 0.15s ease-out !important;
+  padding: 0 6px;
+
+  &:hover,
+  &:focus {
+    border-color: var(--text-color) !important;
+  }
+}
+.MuiOutlinedInput-root {
+  background-color: inherit !important;
+  &.Mui-focused {
+    border-color: var(--text-color) !important;
+    box-shadow: 0 0 0 0.5px var(--text-color);
+  }
+
+  &.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: var(--text-color) !important;
+  }
+  &:hover .MuiOutlinedInput-notchedOutline {
+    border: transparent !important;
+  }
+  .MuiOutlinedInput-notchedOutline {
+    border: transparent !important;
+  }
+}
+
+.MuiInputLabel-root {
+  position: absolute !important;
+  padding: 0 6px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  left: 12px !important;
+  line-height: 1.7 !important;
+  pointer-events: none !important;
+  color: vars.$palette-grey-500 !important;
+  background-color: inherit !important;
+  transition:
+    transform 0.2s ease-out,
+    top 0.2s ease-out,
+    left 0.2s ease-out,
+    font-size 0.2s ease-out !important;
+}
+
+.MuiInputLabel-shrink {
+  top: 0 !important;
+  font-size: 0.7rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.05rem !important;
+  transform: translateY(-50%) !important;
+  left: 14px !important;
+  background-color: inherit !important;
+
+  &.Mui-focused {
+    color: var(--text-color) !important;
+  }
+}
+
+.MuiFormHelperText-root {
+  font-family: 'DMSans', sans-serif !important;
+  line-height: normal !important;
+  letter-spacing: normal !important;
+  margin: 0 !important;
+  position: absolute !important;
+  left: 0 !important;
+  top: 110% !important;
+  font-size: 0.8rem !important;
+  color: vars.$palette-error-main !important;
+  transform: translateY(-2px) !important;
+}
+
+.MuiPickersPopper-paper {
+  border-radius: 8px !important;
+}
+
+// Фон для календаря (мобільний Dialog)
+.MuiDialog-paper {
+  border-radius: 8px !important;
+}
+.MuiTypography-root {
+  font-family: 'DMSans', sans-serif !important;
+}
+
+.MuiDialogActions-root button {
+  font-family: 'DMSans', sans-serif !important;
+  color: vars.$palette-secondary-main !important;
+  font-size: 0.875rem !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+}
+
+@media screen and (max-width: 992px) {
+  .wrapper {
+    padding: vars.$padding-mobile;
+    gap: 1rem;
+  }
+}

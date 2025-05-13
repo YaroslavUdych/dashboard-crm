@@ -1,0 +1,49 @@
+.logo {
+  height: 70px;
+  transform-origin: center;
+  opacity: 0;
+  animation: logoAppear 1.5s cubic-bezier(0.23, 1, 0.32, 1) 0.3s forwards;
+  overflow: visible;
+  align-self: center;
+  justify-self: center;
+}
+
+@keyframes logoAppear {
+  0% {
+    transform: scale(0.2);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.circle {
+  transform: translateX(50%);
+  opacity: 0;
+
+  animation: circleEnter 0.2s ease-out 0.6s forwards;
+}
+
+@keyframes circleEnter {
+  0% {
+    transform: translateX(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .logo {
+    height: 50px;
+    width: 50px;
+  }
+}

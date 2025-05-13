@@ -1,0 +1,104 @@
+.uploadPhotoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  background-color: inherit;
+}
+
+.uploadPhoto {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  padding: 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  position: relative;
+  background-color: inherit;
+  border: 3px dashed rgba(145 158 171 / 0.2);
+  overflow: hidden;
+  -webkit-tap-highlight-color: transparent;
+
+  .text {
+    font-weight: 400;
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  input {
+    display: none;
+  }
+
+  .uploadOverlay {
+    position: absolute;
+    z-index: 1;
+    width: calc(100% - 16px);
+    height: calc(100% - 16px);
+    padding: 8px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    color: #ffffff;
+    background-color: var(--upload-photo-overlay-hover-color);
+
+    opacity: 0;
+    transition: all 0.25s ease-in-out;
+
+    & svg {
+      width: 40px;
+      height: 40px;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.selectAvatarText {
+  display: flex;
+  gap: 0.3rem;
+  flex-direction: column;
+  font-weight: 400;
+  font-size: 0.875rem;
+  color: vars.$palette-grey-500;
+  text-align: center;
+
+  & .limitText {
+    font-size: 0.75rem;
+  }
+
+  & .divider {
+    border-bottom: 1px dashed rgba(145 158 171 / 0.2);
+  }
+}
+
+.avatarList {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  .avatarItem {
+    button {
+      width: 52px;
+      height: 52px;
+    }
+  }
+}

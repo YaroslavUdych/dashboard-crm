@@ -1,0 +1,128 @@
+.banner {
+  padding: 0 !important;
+}
+
+.header {
+  position: relative;
+  width: 100%;
+  height: 180px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(1 41 114/ 0.4), rgba(1, 26, 71, 0.7)),
+      url('../../assets/images/profile-background.webp');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    filter: blur(1px);
+    z-index: 0;
+  }
+
+  & .hederData {
+    position: absolute;
+    bottom: -20px;
+    left: 40px;
+
+    display: flex;
+    gap: 2rem;
+
+    & .avatar {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      overflow: hidden;
+      padding: 3px;
+      background: #fff;
+      box-shadow: vars.$shadows-4;
+      flex-shrink: 0;
+      flex-grow: 0;
+
+      & img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+    }
+
+    & .text {
+      align-self: flex-start;
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 0.5rem;
+      text-transform: capitalize;
+      color: #fff;
+
+      & .name {
+        font-size: 1.6rem;
+        font-weight: 700;
+      }
+
+      & .position {
+        font-size: 0.875rem;
+        color: vars.$palette-grey-400;
+      }
+    }
+  }
+}
+
+.controls {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.3rem 1.5rem;
+  background-color: var(--palette-paper);
+}
+
+@media screen and (max-width: 460px) {
+  .header {
+    & .hederData {
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+
+      & .avatar {
+        width: 150px;
+        height: 150px;
+      }
+
+      & .text {
+        & .name {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .header {
+    & .hederData {
+      gap: 0.6rem;
+
+      & .avatar {
+        width: 120px;
+        height: 120px;
+      }
+
+      & .text {
+        & .name {
+          font-size: 1.3rem;
+        }
+      }
+    }
+  }
+}
